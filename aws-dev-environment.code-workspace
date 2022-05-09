@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-azuretools.vscode-docker",
+			"ms-vscode-remote.remote-containers"
+		]
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "sam-hello-world:HelloWorldFunction",
+				"invokeTarget": {
+					"target": "template",
+					"templatePath": "${workspaceFolder}/sam-hello-world/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"lambda": {
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "API sam-hello-world:HelloWorldFunction",
+				"invokeTarget": {
+					"target": "api",
+					"templatePath": "${workspaceFolder}/sam-hello-world/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"api": {
+					"path": "/hello",
+					"httpMethod": "get",
+					"payload": {
+						"json": {}
+					}
+				}
+			}
+		]
+	}
+}
