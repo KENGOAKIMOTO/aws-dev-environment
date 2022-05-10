@@ -2,10 +2,12 @@
 This skeleton project will get you set up with all the necessary tools and VS Code integrations to develop and deploy applications in AWS.
 
 **Prerequisites:**
+
 Docker
 VS Code
 
 **What's Included**
+
 * Development container based on Ubuntu 22.04
 * Automatic installation of VS Code extensions to integrate with AWS (AWS Toolbox and more)
 * Pyenv and Pipenv with Python 3.9.12 as default
@@ -18,9 +20,11 @@ VS Code
 
 ## Installing Docker
 **macOS and Windows**
+
 Install Docker Desktop from https://www.docker.com/products/docker-desktop/ and follow the instructions given.  For Windows users, using WSL2 is recommended, but shouldn't be necessary.
 
 **Ubuntu (and derivatives)**
+
 Docker is provided in the official Ubuntu repositories.  To install, run the following commands:
 ```
 # Install Docker
