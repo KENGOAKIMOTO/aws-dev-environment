@@ -4,6 +4,7 @@ This skeleton project will get you set up with all the necessary tools and VS Co
 **Prerequisites:**
 
 Docker
+
 VS Code
 
 **What's Included**
