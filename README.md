@@ -41,8 +41,11 @@ After running the above commands, logout and back in or completely reboot so tha
 ## Install VS Code
 Download VS Code for all platforms at https://code.visualstudio.com/download.  VS Code is also included in the Ubuntu software repository as a Snap package and may work.
 
+
 ## Start Coding
 After cloning this repository*, open it in VS Code.  Agree to any prompts to open in a workspace and install recommended plugins.  After the recommended plugins are installed, agree to the prompt to reopen in a container.  VS Code will then start a container and build the development environment.  This will take around 5 minutes, but only needs to happen once.  The integrated terminal in VS Code will open a shell in the development container where all development tools and AWS tools are available.  If you need to rebuild the container, press Ctrl(Cmd)-Shift-P to open the command palette (also available in the menu at View -> Command Palette) and search for "Remote-Containers: Rebuild and Reopen in Container" (Instead of typing the full name, you can just type "rebuild" as a shortcut and select the correct command)
+
+If AWS CLI was not already configured locally on your computer, you can configure it now in the integrated terminal in VS Code with `aws configure`.  This is necessary for AWS integration to work correctly.
 
 The AWS Toolbox extension for VS Code will automatically be installed and provides integration with AWS resources. Learn more about AWS Toolbox here - https://aws.amazon.com/visualstudiocode/
 
