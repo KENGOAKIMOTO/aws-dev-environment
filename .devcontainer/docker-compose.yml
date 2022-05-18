@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        VARIANT: "ubuntu-22.04"
+    depends_on:
+      - dynamodb-local
+    volumes:
+      - ..:/workspace:cached
+      - ~/.aws:/home/vscode/.aws:cached
+    command: sleep infinity
+    network_mode: service:dynamodb-local
+    environment:
+      - PYENV_ROOT=/home/vscode/.pyenv
+
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    working_dir: /home/dynamodblocal
+    ports:
+      - "8000:8000"
+    volumes:
+      - "../.dynamodb-data:/home/dynamodblocal/data"
