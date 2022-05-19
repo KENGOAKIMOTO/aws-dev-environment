@@ -22,7 +22,7 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     working_dir: /home/dynamodblocal
     volumes:
-      - "../.dynamodb-data:/home/dynamodblocal/data"
+      - ../.dynamodb-data:/home/dynamodblocal/data:cached
 
   dynamodb-admin:
     image: aaronshaf/dynamodb-admin
